@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>StylePicker Demo</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div id="preview">
+            <h1 class="preview-heading">Lorem Ipsum Dolor Sit Amet</h1>
+
+            <p class="preview-body">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                in dui mauris. Vivamus hendrerit arcu sed erat molestie
+                vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh
+                porttitor. Ut in nulla enim.
+            </p>
+
+            <h2 class="preview-subheading">Consectetur Adipiscing Elit</h2>
+
+            <p class="preview-body">
+                Praesent dapibus, neque id cursus faucibus, tortor neque egestas
+                augue, eu vulputate magna eros eu erat. Aliquam erat volutpat.
+                Nam dui mi, tincidunt quis, accumsan porttitor, facilisis
+                luctus, metus.
+            </p>
+
+            <p class="preview-accent">
+                Pellentesque habitant morbi tristique senectus et netus et
+                malesuada fames ac turpis egestas.
+            </p>
+
+            <h3 class="preview-subheading">Vivamus Hendrerit Arcu</h3>
+
+            <ul class="preview-list">
+                <li>Morbi in sem quis dui placerat ornare.</li>
+                <li>Praesent dapibus, neque id cursus faucibus.</li>
+                <li>Phasellus ultrices nulla quis nibh.</li>
+                <li>
+                    Quisque a lectus. Donec consectetuer ligula vulputate sem
+                    tristique cursus.
+                </li>
+            </ul>
+
+            <p class="preview-body">
+                Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec
+                consectetuer ligula vulputate sem tristique cursus. Nam nulla
+                quam, gravida non, commodo a, sodales sit amet, nisi.
+            </p>
+
+            <h2 class="preview-subheading">Sed Auctor Neque</h2>
+
+            <p class="preview-body">
+                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+                posuere cubilia Curae; Suspendisse sollicitudin velit sed leo.
+                Ut pharetra augue nec augue. Nam elit agna, endrerit sit amet,
+                tincidunt ac, viverra sed, nulla.
+            </p>
+
+            <blockquote class="preview-accent">
+                Donec porta diam eu massa. Quisque diam lorem, interdum vitae,
+                dapibus ac, scelerisque vitae, pede. Donec eget tellus non erat
+                lacinia fermentum.
+            </blockquote>
+
+            <p class="preview-body">
+                Donec in velit vel ipsum auctor pulvinar. Vestibulum iaculis
+                lacinia est. Proin dictum elementum velit. Fusce euismod
+                consequat ante. Lorem ipsum dolor sit amet, consectetuer
+                adipiscing elit. Pellentesque sed dolor. Aliquam congue
+                fermentum nisl.
+            </p>
+
+            <small class="preview-caption"
+                >Mauris accumsan nulla vel diam. Sed in lacus ut enim adipiscing
+                aliquet.</small
+            >
+        </div>
+
+        <div id="stylePicker"></div>
+
+        <script src="../fonts.js"></script>
+        <script src="../style-picker.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const myStylePicker = new StylePicker({
+                    colors: {
+                        primary: "#292929",
+                        secondary: "#404040",
+                        accent: "#3498DB",
+                        background: "#ecf0f1",
+                    },
+                    fonts: {
+                        heading: { family: "Roboto", size: 32 },
+                        body: { family: "Open Sans", size: 16 },
+                        accent: { family: "Montserrat", size: 18 },
+                        caption: { family: "Lato", size: 12 },
+                    },
+                });
+
+                myStylePicker.init("#stylePicker", "#preview");
+            });
+        </script>
+    </body>
+</html>
